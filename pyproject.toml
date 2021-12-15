@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "kaggle"
+version = "0.0.1"
+description = "Luke's Kaggle submissions"
+readme = "README.md"
+authors = []
+homepage = "lukeshepard.com/kaggle"
+
+[tool.poetry.dependencies]
+python = ">3.8"
+
+[build-system]
+requires = ["poetry>0.12"]
+build-backend = "poetry.masonry.api"
+
+[tool.black]
+line_length = 120
