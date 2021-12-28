@@ -3,7 +3,8 @@ from spacy import displacy
  
 def load_training_data():
     """Load the training data"""
-    train = pd.read_csv("data/train.csv", index_col="id")
+    train = pd.read_csv("input/train.csv", index_col="id")
+    
     return train
 
 df = load_training_data()
@@ -11,7 +12,7 @@ df = load_training_data()
 def display_doc(id):
     """Given a doc id, display the entities using displacy."""
     
-    text = open(f"data/train/{id}.txt").read()
+    text = open(f"input/train/{id}.txt").read()
     values = df.loc[id]
     ents = [{"start": int(row.discourse_start),
              "end": int(row.discourse_end), 
